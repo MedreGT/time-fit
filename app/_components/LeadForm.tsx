@@ -1,6 +1,9 @@
 import { ArrowRight, Check, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
+import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
+import { Label } from "./ui/label";
 import {
   Select,
   SelectContent,
@@ -8,9 +11,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { Button } from "./ui/button";
-import { Checkbox } from "./ui/checkbox";
-import { Label } from "./ui/label";
 
 interface FormData {
   nome: string;
@@ -30,7 +30,6 @@ interface FormErrors {
 }
 
 const WHATSAPP_LINK =
-  process.env.NEXT_PUBLIC_WHATSAPP_LINK ||
   "https://chat.whatsapp.com/SEU-LINK-AQUI";
 const WEBHOOK_URL =
   process.env.NEXT_PUBLIC_WEBHOOK_URL || "";
@@ -93,10 +92,12 @@ export default function LeadForm() {
     setIsSubmitting(true);
 
     try {
-      // Enviar dados para o webhook
       if (WEBHOOK_URL) {
-        const whatsappNumbers = formData.whatsapp.replace(/\D/g, "");
-        
+        const whatsappNumbers = formData.whatsapp.replace(
+          /\D/g,
+          ""
+        );
+
         const payload = {
           nome: formData.nome,
           whatsapp: whatsappNumbers,
@@ -120,7 +121,6 @@ export default function LeadForm() {
         }
       }
 
-      // Se chegou aqui, o webhook foi enviado com sucesso (ou não há webhook configurado)
       setIsSubmitting(false);
       setIsSuccess(true);
     } catch (error) {
@@ -145,7 +145,6 @@ export default function LeadForm() {
       [name]: type === "checkbox" ? checked : value,
     }));
 
-    // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -175,7 +174,6 @@ export default function LeadForm() {
     }
   };
 
-  // Auto redirect after success
   useEffect(() => {
     if (isSuccess) {
       const timer = setTimeout(() => {
@@ -201,11 +199,7 @@ export default function LeadForm() {
               instantes...
             </p>
           </div>
-          <Button
-            asChild
-            size="lg"
-            className="w-full"
-          >
+          <Button asChild size="lg" className="w-full">
             <a
               href={WHATSAPP_LINK}
               target="_blank"
@@ -233,7 +227,6 @@ export default function LeadForm() {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Nome */}
         <div className="space-y-2">
           <Input
             type="text"
@@ -250,7 +243,6 @@ export default function LeadForm() {
           )}
         </div>
 
-        {/* WhatsApp */}
         <div className="space-y-2">
           <Input
             type="tel"
@@ -267,7 +259,6 @@ export default function LeadForm() {
           )}
         </div>
 
-        {/* Email */}
         <div className="space-y-2">
           <Input
             type="email"
@@ -278,14 +269,19 @@ export default function LeadForm() {
           />
         </div>
 
-        {/* Objetivo */}
         <div className="space-y-2">
           <Select
             value={formData.objetivo}
             onValueChange={(value) => {
-              setFormData((prev) => ({ ...prev, objetivo: value }));
+              setFormData((prev) => ({
+                ...prev,
+                objetivo: value,
+              }));
               if (errors.objetivo) {
-                setErrors((prev) => ({ ...prev, objetivo: undefined }));
+                setErrors((prev) => ({
+                  ...prev,
+                  objetivo: undefined,
+                }));
               }
             }}
           >
@@ -296,8 +292,12 @@ export default function LeadForm() {
               <SelectValue placeholder="Qual seu objetivo? *" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="emagrecer">Emagrecer</SelectItem>
-              <SelectItem value="hipertrofia">Hipertrofia</SelectItem>
+              <SelectItem value="emagrecer">
+                Emagrecer
+              </SelectItem>
+              <SelectItem value="hipertrofia">
+                Hipertrofia
+              </SelectItem>
               <SelectItem value="condicionamento">
                 Condicionamento
               </SelectItem>
@@ -314,14 +314,19 @@ export default function LeadForm() {
           )}
         </div>
 
-        {/* Horário */}
         <div className="space-y-2">
           <Select
             value={formData.horario}
             onValueChange={(value) => {
-              setFormData((prev) => ({ ...prev, horario: value }));
+              setFormData((prev) => ({
+                ...prev,
+                horario: value,
+              }));
               if (errors.horario) {
-                setErrors((prev) => ({ ...prev, horario: undefined }));
+                setErrors((prev) => ({
+                  ...prev,
+                  horario: undefined,
+                }));
               }
             }}
           >
@@ -344,7 +349,6 @@ export default function LeadForm() {
           )}
         </div>
 
-        {/* LGPD Checkbox */}
         <div className="space-y-2 pt-2">
           <div className="flex items-start gap-3">
             <Checkbox
@@ -380,7 +384,6 @@ export default function LeadForm() {
           )}
         </div>
 
-        {/* Submit Button */}
         <Button
           type="submit"
           disabled={isSubmitting}

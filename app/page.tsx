@@ -6,7 +6,6 @@ import LeadForm from "./_components/LeadForm";
 export default function Home() {
   return (
     <section className="min-h-screen stronix-gradient-bg stronix-diagonal-accent relative overflow-hidden">
-      {/* Subtle pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -15,7 +14,6 @@ export default function Home() {
       />
 
       <div className="relative z-10 min-h-[90vh] flex flex-col">
-        {/* Header */}
         <header className="w-full py-4 md:py-6 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <Image
@@ -27,13 +25,10 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Main Content */}
         <main className="flex-1 flex items-center py-6 md:py-8 px-4 md:px-8">
           <div className="max-w-7xl mx-auto w-full">
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-              {/* Left Column - Content */}
               <div className="space-y-5 animate-slide-right">
-                {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <span className="text-xs font-medium text-foreground uppercase tracking-wide">
@@ -41,7 +36,6 @@ export default function Home() {
                   </span>
                 </div>
 
-                {/* Headline */}
                 <div className="space-y-3">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight text-balance text-foreground font-medium">
                     UMA ACADEMIA TOTALMENTE RENOVADA,
@@ -57,7 +51,6 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Social Proof */}
                 <div className="flex flex-wrap items-center gap-6 pt-3 border-t border-border/30">
                   <div className="flex items-center gap-2">
                     <Users className="w-5 h-5 text-primary" />
@@ -85,7 +78,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Column - Form */}
               <div className="lg:justify-self-end w-full max-w-md lg:max-w-lg mx-auto lg:mx-0">
                 <LeadForm />
               </div>

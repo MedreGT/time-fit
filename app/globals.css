@@ -54,31 +54,25 @@
   :root {
     --radius: 0.625rem;
 
-    /* Base (LIGHT) — clean, mas com o laranja como identidade */
-    --background: oklch(1 0 0); /* #FFFFFF */
-    --foreground: oklch(0.268 0.004 106.643); /* #262624 */
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.268 0.004 106.643);
 
-    --card: oklch(1 0 0); /* #FFFFFF */
-    --card-foreground: oklch(
-      0.268 0.004 106.643
-    ); /* #262624 */
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.268 0.004 106.643);
 
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.268 0.004 106.643);
 
-    /* Brand */
-    --primary: oklch(0.677 0.214 34.25); /* #FF542C */
-    --primary-foreground: oklch(1 0 0); /* #FFFFFF */
+    --primary: oklch(0.677 0.214 34.25);
+    --primary-foreground: oklch(1 0 0);
 
-    /* Neutros */
     --secondary: oklch(0.97 0 0);
     --secondary-foreground: oklch(0.268 0.004 106.643);
 
     --muted: oklch(0.97 0 0);
     --muted-foreground: oklch(0.56 0 0);
 
-    /* Accent = “tint” do laranja pra hover/realces suaves */
-    --accent: oklch(0.961 0.019 33.365); /* ~#FFEEEA */
+    --accent: oklch(0.961 0.019 33.365);
     --accent-foreground: oklch(0.268 0.004 106.643);
 
     --destructive: oklch(0.577 0.245 27.325);
@@ -86,17 +80,13 @@
     --border: oklch(0.922 0 0);
     --input: oklch(0.922 0 0);
 
-    /* Ring com cara de marca */
-    --ring: oklch(0.677 0.214 34.25); /* #FF542C */
+    --ring: oklch(0.677 0.214 34.25);
 
-    /* Charts (opcional, mas já fica com identidade) */
-    --chart-1: oklch(0.677 0.214 34.25); /* laranja */
-    --chart-2: oklch(0.268 0.004 106.643); /* chumbo */
+    --chart-1: oklch(0.677 0.214 34.25);
+    --chart-2: oklch(0.268 0.004 106.643);
     --chart-3: oklch(0.6 0.118 184.704);
     --chart-4: oklch(0.828 0.189 84.429);
     --chart-5: oklch(0.769 0.188 70.08);
-
-    /* Sidebar tokens (mesma vibe do app) */
     --sidebar: oklch(1 0 0);
     --sidebar-foreground: oklch(0.268 0.004 106.643);
     --sidebar-primary: oklch(0.677 0.214 34.25);
@@ -110,38 +100,29 @@
   .dark {
     --radius: 0.625rem;
 
-    /* DARK (aqui fica com a cara da LP: fundo chumbo + CTA laranja) */
-    --background: oklch(0.268 0.004 106.643); /* #262624 */
-    --foreground: oklch(
-      0.985 0 0
-    ); /* branco levemente “soft” */
+    --background: oklch(0.268 0.004 106.643);
+    --foreground: oklch(0.985 0 0);
 
-    /* Card branco (perfeito pro formulário destacado no fundo escuro) */
-    --card: oklch(1 0 0); /* #FFFFFF */
-    --card-foreground: oklch(
-      0.268 0.004 106.643
-    ); /* #262624 */
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.268 0.004 106.643);
 
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.268 0.004 106.643);
 
-    --primary: oklch(0.677 0.214 34.25); /* #FF542C */
-    --primary-foreground: oklch(1 0 0); /* #FFFFFF */
+    --primary: oklch(0.677 0.214 34.25);
+    --primary-foreground: oklch(1 0 0);
 
-    /* Superfícies escuras “um tiquinho acima” do fundo */
-    --secondary: oklch(0.371 0.003 106.562); /* ~#40403E */
+    --secondary: oklch(0.371 0.003 106.562);
     --secondary-foreground: oklch(0.985 0 0);
 
-    --muted: oklch(0.336 0.002 106.492); /* ~#373736 */
+    --muted: oklch(0.336 0.002 106.492);
     --muted-foreground: oklch(0.78 0 0);
 
-    /* Accent escuro com puxada pro laranja (hover/realce) */
     --accent: oklch(0.677 0.214 34.25);
     --accent-foreground: oklch(0.985 0 0);
 
     --destructive: oklch(0.704 0.191 22.216);
 
-    /* Bordas/input com alpha no branco */
     --border: oklch(1 0 0 / 12%);
     --input: oklch(1 0 0 / 15%);
 
@@ -173,7 +154,6 @@
   }
 }
 
-/* Stronix gradient background */
 .stronix-gradient-bg {
   background: linear-gradient(
     135deg,
@@ -209,7 +189,7 @@
 }
 
 .stronix-highlight-icon {
-  @apply flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center;
+  @apply shrink-0 w-10 h-10 rounded-lg flex items-center justify-center;
   background: hsl(var(--stronix-orange) / 0.15);
   color: hsl(var(--stronix-orange));
 }
