@@ -17,7 +17,7 @@ export default function Home() {
         <header className="w-full py-4 md:py-6 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <Image
-              src="/logo-time-fit.png"
+              src="/logo-stronix.png"
               alt="Stronix Academia"
               width={100}
               height={100}
