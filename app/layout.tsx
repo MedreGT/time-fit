@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Stronix Academia",
   description:
-    "Uma academia totalmente renovada, projetada para melhorar os resultados dos nossos alunos.",
+    "Uma academia totalmente renovada, projetada para melhorar os resultados dos nossos alunos",
 };
 
 export default function RootLayout({
