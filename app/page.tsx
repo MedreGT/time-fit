@@ -19,7 +19,7 @@ export default function Home() {
             <Image
               src="/logo-stronix.png"
               alt="Stronix Academia"
-              width={100}
+              width={200}
               height={100}
             />
           </div>
