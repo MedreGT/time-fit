@@ -304,6 +304,7 @@ export default function LeadForm() {
               <SelectItem value="reabilitacao">
                 Reabilitação
               </SelectItem>
+              <SelectItem value="saude">Saúde</SelectItem>
               <SelectItem value="outro">Outro</SelectItem>
             </SelectContent>
           </Select>

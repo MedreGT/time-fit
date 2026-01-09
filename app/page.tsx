@@ -1,5 +1,5 @@
 "use client";
-import { Star, Users } from "lucide-react";
+import { Star } from "lucide-react";
 import Image from "next/image";
 import LeadForm from "./_components/LeadForm";
 
@@ -52,16 +52,6 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 pt-3 border-t border-border/30">
-                  <div className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-foreground/80">
-                      Mais de{" "}
-                      <strong className="text-foreground font-medium">
-                        500+ alunos
-                      </strong>{" "}
-                      treinando com a gente
-                    </span>
-                  </div>
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
