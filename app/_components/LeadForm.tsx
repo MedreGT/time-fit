@@ -375,7 +375,7 @@ export default function LeadForm() {
               className="text-sm text-card-foreground leading-tight cursor-pointer"
             >
               Concordo em receber contato e comunicações da
-              Stronix.
+              Time Fit.
             </Label>
           </div>
           {errors.lgpdConsent && (

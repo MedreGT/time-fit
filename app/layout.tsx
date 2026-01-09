@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Stronix Academia",
+  title: "Time Fit",
   description:
     "Uma academia totalmente renovada, projetada para melhorar os resultados dos nossos alunos",
 };

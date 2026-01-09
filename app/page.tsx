@@ -18,7 +18,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <Image
               src="/logo-time-fit.png"
-              alt="Stronix"
+              alt="Time Fit"
               width={100}
               height={100}
             />
@@ -32,7 +32,7 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <span className="text-xs font-medium text-foreground uppercase tracking-wide">
-                    NOVA UNIDADE • STRONIX ACADEMIA
+                    NOVA UNIDADE • TIME FIT
                   </span>
                 </div>
 
@@ -43,10 +43,9 @@ export default function Home() {
                     DOS NOSSOS ALUNOS
                   </h1>
                   <p className="text-base md:text-lg text-foreground/80 max-w-xl leading-relaxed">
-                    A Stronix nasce como a evolução da Time
-                    Fit, trazendo uma estrutura mais
-                    completa, novos espaços de treino e o
-                    mesmo padrão na qualidade do
+                    A Time Fit renasce com uma estrutura
+                    mais completa, novos espaços de treino e
+                    o mesmo padrão na qualidade do
                     atendimento.
                   </p>
                 </div>
